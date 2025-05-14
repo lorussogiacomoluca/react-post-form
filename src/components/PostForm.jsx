@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const PostForm = ({ formData, setFormData }) => {
+const PostForm = ({ formData, setFormData, handleChange }) => {
   return (
     <div className="row">
       <form>
@@ -17,6 +17,7 @@ const PostForm = ({ formData, setFormData }) => {
                 placeholder="Autore del post"
                 name="postAuthor"
                 value={formData.postAuthor}
+                onChange={handleChange}
               />
             </div>
           </div>
@@ -32,6 +33,7 @@ const PostForm = ({ formData, setFormData }) => {
                 placeholder="Titolo del post"
                 name="postTitle"
                 value={formData.postTitle}
+                onChange={handleChange}
               />
             </div>
           </div>
@@ -48,6 +50,7 @@ const PostForm = ({ formData, setFormData }) => {
                 rows="3"
                 name="postBody"
                 value={formData.postBody}
+                onChange={handleChange}
               ></textarea>
             </div>
           </div>
@@ -59,6 +62,7 @@ const PostForm = ({ formData, setFormData }) => {
             id="postPublic"
             name="postPublic"
             checked={formData.postPublic}
+            onChange={handleChange}
           />
           <label className="form-check-label" htmlFor="postPublic">
             Post pubblicato
