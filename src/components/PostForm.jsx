@@ -5,7 +5,7 @@ const PostForm = ({ formData, setFormData, handleChange, handleSubmit }) => {
     <div className="row">
       <form onSubmit={handleSubmit}>
         <div className="row">
-          <div className="col-6">
+          <div className="col-12 col-md-6 ">
             <div className="mb-3">
               <label htmlFor="author" className="form-label">
                 Autore del post
@@ -21,7 +21,7 @@ const PostForm = ({ formData, setFormData, handleChange, handleSubmit }) => {
               />
             </div>
           </div>
-          <div className="col-6">
+          <div className="col-12 col-md-6">
             <div className="mb-3">
               <label htmlFor="title" className="form-label">
                 Titolo del post
@@ -69,7 +69,15 @@ const PostForm = ({ formData, setFormData, handleChange, handleSubmit }) => {
           </label>
         </div>
         <button type="submit" className="btn btn-primary">
-          Pubblica/bozza
+          {formData.public ? (
+            <>
+              <i className="fa-solid fa-upload"></i> Pubblica articolo
+            </>
+          ) : (
+            <>
+              <i className="fa-solid fa-floppy-disk"></i> Salva bozza
+            </>
+          )}
         </button>
       </form>
     </div>
