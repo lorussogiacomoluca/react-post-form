@@ -1,8 +1,10 @@
 import { useState } from "react";
 import Navbar from "./components/Navbar";
 import PostForm from "./components/PostForm";
+import axios from "axios";
 
 function App() {
+  const endpoint = "https://67c5b4f3351c081993fb1ab6.mockapi.io/api/posts";
   const [formData, setFormData] = useState({
     postAuthor: "",
     postTitle: "",
@@ -25,6 +27,13 @@ function App() {
     });
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    axios
+      .post(endpoint, formData)
+      .then((res) => console.log("Dati inviati", res.data));
+  };
+
   return (
     <>
       <Navbar />
@@ -33,6 +42,7 @@ function App() {
           formData={formData}
           setFormData={setFormData}
           handleChange={handleChange}
+          handleSubmit={handleSubmit}
         />
       </div>
     </>

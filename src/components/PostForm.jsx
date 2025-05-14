@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
-const PostForm = ({ formData, setFormData, handleChange }) => {
+const PostForm = ({ formData, setFormData, handleChange, handleSubmit }) => {
   return (
     <div className="row">
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className="row">
           <div className="col-6">
             <div className="mb-3">
