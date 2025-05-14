@@ -12,7 +12,17 @@ function App() {
 
   const handleChange = (e) => {
     const { name, value, checked, type } = e.target;
-    console.log(e.target.type);
+    //DEBUG
+    // console.log("Name:", name);
+    // console.log("Value:", value);
+    // console.log("Checked:", checked);
+    // console.log("Type:", type);
+    // console.log(e);
+    // console.log(type === "checkbox" ? checked : value);
+    setFormData({
+      ...formData,
+      [name]: type === "checkbox" ? checked : value,
+    });
   };
 
   return (
