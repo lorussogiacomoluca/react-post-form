@@ -15,3 +15,10 @@
 - `public` (boolean) - Se il post deve essere pubblico (`true`) o una bozza (`false`)
 
 🔗 **L’endpoint** a cui effettuare la chiamata POST è il seguente:
+https://67c5b4f3351c081993fb1ab6.mockapi.io/api/posts
+
+✅ Questo endpoint, in caso di successo, vi **restituisce i dati inviati**. Stampateli in console per **verificare di essere riusciti ad inviare correttamente tutto**!
+
+---
+
+📌 **Numero minimo di push: 7**
