@@ -2,19 +2,18 @@ import { useState } from "react";
 import Navbar from "./components/Navbar";
 import PostForm from "./components/PostForm";
 
-const [formData, setFormData] = useState({
-  postAuthor: "",
-  postTitle: "",
-  postBody: "",
-  postPublic: false,
-});
-
 function App() {
+  const [formData, setFormData] = useState({
+    postAuthor: "",
+    postTitle: "",
+    postBody: "",
+    postPublic: false,
+  });
   return (
     <>
       <Navbar />
       <div className="container mt-4">
-        <PostForm />
+        <PostForm formData={formData} setFormData={setFormData} />
       </div>
     </>
   );
