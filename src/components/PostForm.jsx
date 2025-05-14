@@ -7,32 +7,32 @@ const PostForm = ({ formData, setFormData, handleChange, handleSubmit }) => {
         <div className="row">
           <div className="col-6">
             <div className="mb-3">
-              <label htmlFor="postAuthor" className="form-label">
+              <label htmlFor="author" className="form-label">
                 Autore del post
               </label>
               <input
                 type="text"
                 className="form-control"
-                id="postAuthor"
+                id="author"
                 placeholder="Autore del post"
-                name="postAuthor"
-                value={formData.postAuthor}
+                name="author"
+                value={formData.author}
                 onChange={handleChange}
               />
             </div>
           </div>
           <div className="col-6">
             <div className="mb-3">
-              <label htmlFor="postTitle" className="form-label">
+              <label htmlFor="title" className="form-label">
                 Titolo del post
               </label>
               <input
                 type="text"
                 className="form-control"
-                id="postTitle"
+                id="title"
                 placeholder="Titolo del post"
-                name="postTitle"
-                value={formData.postTitle}
+                name="title"
+                value={formData.title}
                 onChange={handleChange}
               />
             </div>
@@ -41,15 +41,15 @@ const PostForm = ({ formData, setFormData, handleChange, handleSubmit }) => {
         <div className="row">
           <div className="col">
             <div className="mb-3">
-              <label htmlFor="postBody" className="form-label">
+              <label htmlFor="body" className="form-label">
                 Testo del post
               </label>
               <textarea
                 className="form-control"
-                id="postBody"
+                id="body"
                 rows="3"
-                name="postBody"
-                value={formData.postBody}
+                name="body"
+                value={formData.body}
                 onChange={handleChange}
               ></textarea>
             </div>
@@ -59,12 +59,12 @@ const PostForm = ({ formData, setFormData, handleChange, handleSubmit }) => {
           <input
             type="checkbox"
             className="form-check-input"
-            id="postPublic"
-            name="postPublic"
-            checked={formData.postPublic}
+            id="public"
+            name="public"
+            checked={formData.public}
             onChange={handleChange}
           />
-          <label className="form-check-label" htmlFor="postPublic">
+          <label className="form-check-label" htmlFor="public">
             Post pubblicato
           </label>
         </div>

@@ -6,10 +6,10 @@ import axios from "axios";
 function App() {
   const endpoint = "https://67c5b4f3351c081993fb1ab6.mockapi.io/api/posts";
   const [formData, setFormData] = useState({
-    postAuthor: "",
-    postTitle: "",
-    postBody: "",
-    postPublic: false,
+    author: "",
+    title: "",
+    body: "",
+    public: false,
   });
 
   const handleChange = (e) => {
@@ -31,7 +31,16 @@ function App() {
     e.preventDefault();
     axios
       .post(endpoint, formData)
-      .then((res) => console.log("Dati inviati", res.data));
+      .then((res) => {
+        console.log("Dati inviati", res.data);
+        setFormData({
+          author: "",
+          title: "",
+          body: "",
+          public: false,
+        });
+      })
+      .catch((error) => console.log("Errore nell' invio dei dati", error));
   };
 
   return (
