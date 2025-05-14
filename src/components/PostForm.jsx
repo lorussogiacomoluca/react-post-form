@@ -15,6 +15,7 @@ const PostForm = () => {
                 className="form-control"
                 id="postAuthor"
                 placeholder="Autore del post"
+                name="postAuthor"
               />
             </div>
           </div>
@@ -28,6 +29,7 @@ const PostForm = () => {
                 className="form-control"
                 id="postTitle"
                 placeholder="Titolo del post"
+                name="postTitle"
               />
             </div>
           </div>
@@ -38,12 +40,22 @@ const PostForm = () => {
               <label for="postBody" class="form-label">
                 Testo del post
               </label>
-              <textarea class="form-control" id="postBody" rows="3"></textarea>
+              <textarea
+                class="form-control"
+                id="postBody"
+                rows="3"
+                name="postBody"
+              ></textarea>
             </div>
           </div>
         </div>
         <div className="mb-3 form-check">
-          <input type="checkbox" className="form-check-input" id="postPublic" />
+          <input
+            type="checkbox"
+            className="form-check-input"
+            id="postPublic"
+            name="postPublic"
+          />
           <label className="form-check-label" for="postPublic">
             Post pubblicato
           </label>
